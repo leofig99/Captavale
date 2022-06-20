@@ -1,0 +1,223 @@
+html,
+body {
+  height: 100%;
+  color: #696969;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+p.alter {
+  font-size: 1rem!important;
+}
+
+.header-block {
+  display: inline-block;
+}
+
+.colored-header {
+     background-color: #78909c!important;
+     color: #ffffff;
+}
+
+.colored-light {
+  background-color: #eceff1!important;
+}
+
+.md-form input[type=date], .md-form input[type=datetime-local],
+.md-form input[type=email], .md-form input[type=number], .md-form input[type=password],
+.md-form input[type=search-md], .md-form input[type=search], .md-form input[type=tel],
+.md-form input[type=text], .md-form input[type=time], .md-form input[type=url],
+.md-form textarea.md-textarea {
+  font-weight: lighter!important;
+}
+
+.md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]),
+.md-form input[type=email]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]),
+.md-form input[type=password]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]),
+.md-form input[type=search]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]),
+.md-form input[type=text]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]),
+.md-form input[type=url]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
+    -webkit-box-shadow: 0 1px 0 0 #78909c!important;
+    box-shadow: 0 1px 0 0 #78909c!important;
+    border-bottom: 1px solid #78909c!important;
+}
+
+a.btn, a.btn:hover {
+  text-decoration: none!important;
+}
+
+a.btn-blue-grey, a.btn-blue-grey:hover {
+  color: #ffffff!important;
+}
+
+.btn {
+  text-transform: none!important;
+}
+
+.btn.btn-sm {
+  font-size: .9rem!important;
+}
+
+.badge-pill-big {
+  font-size: 120%;
+  padding: .4rem .7rem;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: #78909c!important;
+}
+
+a, a:hover, a:disabled:hover {
+  color: #4db6ac!important;
+}
+
+a:hover, a:disabled:hover {
+  text-decoration: underline!important;
+}
+
+.pagination .page-item.active .page-link {
+  text-decoration: none!important;
+  background-color: #78909c!important;
+  color: #ffffff!important;
+}
+
+.pagination .page-item .page-link {
+  color: #696969!important;
+}
+
+.pagination.pagination-circle .page-item .page-link {
+  color: #696969!important;
+  text-decoration: none!important;
+}
+
+.pagination.pg-blue .page-item.active .page-link, .pagination.pg-blue .page-item.active .page-link:hover {
+  color: #ffffff!important;
+  text-decoration: none!important;
+}
+
+.classic-tabs .nav li a.active {
+  color: #ffffff!important;
+}
+
+.classic-tabs .nav li a.active:hover {
+  text-decoration: none!important;
+}
+
+.classic-tabs .nav li a {
+  color: #ffffff!important;
+  text-transform: none!important;
+  font-size: 1.5rem!important;
+}
+
+.classic-tabs .nav li a:hover {
+  text-decoration: none!important;
+}
+
+.accordion .card, .accordion .card:first-of-type, .accordion .card:not(:first-of-type):not(:last-of-type) {
+  background-color: transparent;
+}
+
+.card-header a:hover {
+  text-decoration: none!important;
+}
+
+small.header {
+  font-size: 50%;
+}
+
+hr {
+  margin-bottom: 1.5rem!important;
+  margin-top: 1.5rem!important;
+}
+
+footer.page-footer, footer.page-footer a {
+  color: #696969!important;
+}
+
+footer.page-footer, footer.page-footer .footer-copyright {
+  background-color: transparent!important;
+}
+
+footer.page-footer .footer-copyright {
+  color: #696969!important;
+}
+
+.card-body {
+  padding: 1.5rem 1.4rem 2rem;
+}
+
+.picker__box .picker__header .picker__date-display {
+  background-color: #78909c!important;
+}
+
+.picker__box .picker__header .picker__date-display .picker__weekday-display {
+  background-color: #607d8b!important;
+}
+
+.picker__box .picker__table .picker--focused, .picker__box .picker__table .picker__day--selected, .picker__box .picker__table .picker__day--selected:hover {
+  background-color: #78909c!important;
+}
+
+.picker__box .picker__table .picker__day.picker__day--today {
+  color: #78909c!important;
+}
+
+.picker__box .picker__footer .picker__button--clear:hover, .picker__box .picker__footer .picker__button--close:hover, .picker__box .picker__footer .picker__button--today:hover {
+  border-bottom-color: #cfd8dc!important;
+  background: #cfd8dc!important;
+}
+
+label.alter {
+  top: .2rem!important;
+  font-size: 1rem!important;
+}
+
+.md-form input[type=date]:focus:not([readonly]) + label, .md-form input[type=datetime-local]:focus:not([readonly]) + label,
+.md-form input[type=email]:focus:not([readonly]) + label, .md-form input[type=number]:focus:not([readonly]) + label,
+.md-form input[type=password]:focus:not([readonly]) + label, .md-form input[type=search-md]:focus:not([readonly]) + label,
+.md-form input[type=search]:focus:not([readonly]) + label, .md-form input[type=tel]:focus:not([readonly]) + label,
+.md-form input[type=text]:focus:not([readonly]) + label, .md-form input[type=time]:focus:not([readonly]) + label,
+.md-form input[type=url]:focus:not([readonly]) + label, .md-form textarea.md-textarea:focus:not([readonly]) + label {
+  color: #78909c!important;
+}
+
+.form-check-input[type=radio]:checked+label:after {
+  background-color: #cfd8dc!important;
+  border: 2px solid #78909c!important;
+}
+
+.form-check-input[type=radio]:not(:checked)+label:after, .form-check-input[type=radio]:not(:checked)+label:before, label.btn input[type=radio]:not(:checked)+label:after, label.btn input[type=radio]:not(:checked)+label:before {
+  border: 2px solid #78909c!important;
+}
+
+.pagination.pg-blue .page-item.active .page-link, .pagination.pg-blue .page-item.active .page-link:hover {
+  background-color: #78909c!important;
+}
+
+.table > tbody > tr > td {
+     vertical-align: middle!important;
+}
+
+.table-colored > tbody > tr > td:first-child {
+     background-color: #78909c!important;
+     color: #ffffff;
+}
+
+.table-head-colored > thead > tr > th {
+     background-color: #cfd8dc!important;
+     color: #78909c;
+}
+
+.table-colored-light > tbody > tr > td:first-child {
+     background-color: #eceff1!important;
+}
+
+.datatable-colored > thead > tr:first-child, .datatable-colored > tfoot > tr:first-child {
+     background-color: #78909c!important;
+     color: #ffffff!important;
+}

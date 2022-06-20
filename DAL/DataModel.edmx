@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="captavaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DocumentoProspecto">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoProspecto" Type="int" Nullable="false" />
+          <Property Name="Archivo" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prospecto">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="100" />
+          <Property Name="Calle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Numero" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Colonia" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CodigoPostal" Type="smallint" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RFC" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Estatus" Type="tinyint" Nullable="false" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <Association Name="FK_DocumentoProspecto_Prospecto">
+          <End Role="Prospecto" Type="Self.Prospecto" Multiplicity="1" />
+          <End Role="DocumentoProspecto" Type="Self.DocumentoProspecto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prospecto">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="DocumentoProspecto">
+              <PropertyRef Name="CodigoProspecto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="captavaleModelStoreContainer">
+          <EntitySet Name="DocumentoProspecto" EntityType="Self.DocumentoProspecto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prospecto" EntityType="Self.Prospecto" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DocumentoProspecto_Prospecto" Association="Self.FK_DocumentoProspecto_Prospecto">
+            <End Role="Prospecto" EntitySet="Prospecto" />
+            <End Role="DocumentoProspecto" EntitySet="DocumentoProspecto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="captavaleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_CaptavaleEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Prospecto" EntityType="captavaleModel.Prospecto" />
+          <EntitySet Name="DocumentoProspecto" EntityType="captavaleModel.DocumentoProspecto" />
+          <AssociationSet Name="FK_DocumentoProspecto_Prospecto" Association="captavaleModel.FK_DocumentoProspecto_Prospecto">
+            <End Role="Prospecto" EntitySet="Prospecto" />
+            <End Role="DocumentoProspecto" EntitySet="DocumentoProspecto" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Prospecto">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoPaterno" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoMaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Calle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Numero" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Colonia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoPostal" Type="Int16" Nullable="false" />
+          <Property Name="Telefono" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="Byte" Nullable="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DocumentoProspecto" Relationship="captavaleModel.FK_DocumentoProspecto_Prospecto" FromRole="Prospecto" ToRole="DocumentoProspecto" />
+        </EntityType>
+        <EntityType Name="DocumentoProspecto">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoProspecto" Type="Int32" Nullable="false" />
+          <Property Name="Archivo" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Prospecto" Relationship="captavaleModel.FK_DocumentoProspecto_Prospecto" FromRole="DocumentoProspecto" ToRole="Prospecto" />
+        </EntityType>
+        <Association Name="FK_DocumentoProspecto_Prospecto">
+          <End Type="captavaleModel.Prospecto" Role="Prospecto" Multiplicity="1" />
+          <End Type="captavaleModel.DocumentoProspecto" Role="DocumentoProspecto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prospecto">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="DocumentoProspecto">
+              <PropertyRef Name="CodigoProspecto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="captavaleModelStoreContainer" CdmEntityContainer="DB_CaptavaleEntities">
+          <EntitySetMapping Name="Prospecto">
+            <EntityTypeMapping TypeName="captavaleModel.Prospecto">
+              <MappingFragment StoreEntitySet="Prospecto">
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Calle" ColumnName="Calle" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentoProspecto">
+            <EntityTypeMapping TypeName="captavaleModel.DocumentoProspecto">
+              <MappingFragment StoreEntitySet="DocumentoProspecto">
+                <ScalarProperty Name="Archivo" ColumnName="Archivo" />
+                <ScalarProperty Name="CodigoProspecto" ColumnName="CodigoProspecto" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
