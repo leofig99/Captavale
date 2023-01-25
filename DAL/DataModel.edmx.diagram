@@ -5,8 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6e0c945a2b684e30b8b2d293b8d9b40c" Name="Diagram1">
-        <EntityTypeShape EntityType="captavaleModel.Prospecto" Width="1.5" PointX="0.75" PointY="1" />
         <EntityTypeShape EntityType="captavaleModel.DocumentoProspecto" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="captavaleModel.Prospecto" Width="1.5" PointX="0.75" PointY="1" />
         <AssociationConnector Association="captavaleModel.FK_DocumentoProspecto_Prospecto" />
       </Diagram>
     </edmx:Diagrams>

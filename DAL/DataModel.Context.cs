@@ -25,7 +25,7 @@ namespace DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Prospecto> Prospecto { get; set; }
         public virtual DbSet<DocumentoProspecto> DocumentoProspecto { get; set; }
+        public virtual DbSet<Prospecto> Prospecto { get; set; }
     }
 }

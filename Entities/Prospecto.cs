@@ -27,7 +27,7 @@ namespace Entities
         public string Calle { get; set; }
         public string Numero { get; set; }
         public string Colonia { get; set; }
-        public short CodigoPostal { get; set; }
+        public int CodigoPostal { get; set; }
         public string Telefono { get; set; }
         public string RFC { get; set; }
         public byte Estatus { get; set; }

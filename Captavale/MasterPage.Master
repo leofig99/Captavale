@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="img/favicon.png">
-    <title>Proyecto Captavale &mdash; </title>
+    <title>Proyecto Prospectos &mdash; </title>
 
     <link href="Content/styles.css?v=1.2" rel="stylesheet" />
     <link href="Content/admin.css?v=1.02" rel="stylesheet" />
@@ -22,7 +22,7 @@
             <div id="sidebar" class="col-lg-2 col-md-2 col-xs-2">
                 <a class="main-logo-icon" href="default.aspx">Logo</a>
                 <h2 class="title">--</h2>
-                <h3 class="subtitle">Captavale</h3>
+                <h3 class="subtitle">Proyecto prospectos</h3>
 
                 <nav>
                     <ul class="sidebar-nav">
